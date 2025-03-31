@@ -1,11 +1,11 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class SequenciaNumeros {
+public class exe10 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        // Solicita a quantidade de números
+       
         System.out.print("Digite a quantidade de números: ");
         int n = scanner.nextInt();
         
@@ -13,28 +13,25 @@ public class SequenciaNumeros {
         int somaPares = 0, somaImpares = 0, somaTotal = 0;
         int maior = Integer.MIN_VALUE, menor = Integer.MAX_VALUE;
         
-        // Solicita os números ao usuário
+    
         System.out.println("Digite os números:");
         for (int i = 0; i < n; i++) {
             numeros[i] = scanner.nextInt();
             somaTotal += numeros[i];
 
-            // Verifica o maior e menor número
             if (numeros[i] > maior) maior = numeros[i];
             if (numeros[i] < menor) menor = numeros[i];
 
-            // Soma os números pares e ímpares
             if (numeros[i] % 2 == 0) {
                 somaPares += numeros[i];
             } else {
                 somaImpares += numeros[i];
             }
         }
-        
-        // Calcula a média
+
         double media = somaTotal / (double)n;
 
-        // Ordena os números em ordem crescente e decrescente
+   
         int[] numerosCrescente = Arrays.copyOf(numeros, n);
         Arrays.sort(numerosCrescente);
         int[] numerosDecrescente = Arrays.copyOf(numeros, n);
@@ -45,7 +42,7 @@ public class SequenciaNumeros {
             numerosDecrescente[n - i - 1] = temp;
         }
 
-        // Exibe os resultados
+
         System.out.println("Números em ordem crescente:");
         for (int num : numerosCrescente) {
             System.out.print(num + " ");
